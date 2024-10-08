@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<html>
+	<head>
+		<style>
+			@font-face
+			{
+				font-family:FGDemi;src:url("fonts/Franklin Gothic Demi Regular.ttf");
+			}
+			a
+			{
+				padding:0;
+				margin:0;
+				text-decoration:none;
+				color:#7D8392;
+			}
+			button
+			{
+				padding:0;
+				margin:0;
+				position:absolute;
+				border-radius:1vw;
+				font-size:clamp(1.96vw,15.69px,2.65vw);
+				white-space:normal;
+			}
+			h1
+			{
+				padding:0;
+				margin:0;
+			}
+			p
+			{
+				padding:0;
+				margin:0;
+			}
+			.botRef
+			{
+				font-size:clamp(1.67vw,13.32px,2.25vw);
+			}
+			.botRef a:hover
+			{
+				text-decoration:underline;
+			}
+			.dDownBox{}
+			.dDownBox:before
+			{
+				content:"";
+				box-sizing:border-box;
+				border:.1vw solid black;
+				position:absolute;
+				height:100%;
+				width:100%;
+				background-color:#EBEBEB;
+			}
+			.dDownBox:focus
+			{
+				pointer-events:none;
+			}
+			.dDownBox:focus .dDownMenu
+			{
+				opacity:1;
+				visibility:visible;
+			}
+			.dDownBoxAssets
+			{
+				position:absolute;
+				height:100%;
+				width:100%;
+			}
+			.dDownBoxAssets h1
+			{
+				position:static;
+				padding-top:2%;
+				padding-bottom:1%;
+				text-align:center;
+				font-size:clamp(1.87vw,14.99px,2.53vw);
+				line-height:113.85%;
+			}
+			.dDownBoxAssets p
+			{
+				position:static;
+				text-align:center;
+				font-size:clamp(1.35vw,10.82px,1.83vw);
+				line-height:114.9%;
+			}
+			.dDownMenu
+			{
+				pointer-events:auto;
+				position:absolute;
+				visibility:hidden;
+				background:#EBEBEB;
+				top:79.59%;
+				width:100%;
+				box-sizing:border-box;
+				border:.1vw solid black;
+				border-top:none;
+				padding-top:8%;
+				z-index:1;
+			}
+			.dDownMenu a
+			{
+				color:#7D8392;
+				font-size:clamp(1.35vw,10.82px,1.83vw);
+				display:block;
+				margin-left:25%;
+				margin-right:25%;
+				margin-bottom:7.2%;
+				text-indent:-15%;
+			}
+			.dDownMenu a:hover
+			{
+				text-decoration:underline;
+			}
+			.dDTriLoc
+			{
+				position:absolute;
+				top:79.59%;
+				width:100%;
+				margin:auto;
+				height:15.24%;
+			}
+			.dDTriSize
+			{
+				position:static;
+				margin:auto;
+				display:block;
+				height:100%;
+				width:auto;
+			}
+			.hotBod
+			{
+				position:relative;
+				margin:auto;
+				padding-left:clamp(0,104px,13%);
+				padding-left:clamp(0,104px,13%);
+				width:clamp(74%,800px,100%);
+				height:clamp(162.8vw,1320px,220vw);
+				overflow-x:hidden;
+			}
+			.picCap{}
+			.picCap h1
+			{
+				font-size:clamp(1.67vw,13.32px,2.25vw);
+			}
+			.picCap p, a
+			{
+				font-size:clamp(1.25vw,9.99px,1.69vw);
+			}
+			.picCap a:hover
+			{
+				text-decoration:underline;
+			}
+			.tedCap
+			{
+				font-size:clamp(2.5vw,19.99px,3.38vw);
+			}
+			.tedCap a
+			{
+				color:#7D8392;
+				font-size:clamp(2.5vw,19.99px,3.38vw);
+			}
+			.tedCap a:hover
+			{
+				text-decoration:underline;
+			}
+		</style>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>EGD Home</title>
+	</head>
+
+	<body class="hotBod">
+			<div style="position:absolute;top:0;left:0;height:7.96%;width:100%;">
+				<div style="position:absolute;top:44.1%;left:9.68%;">
+					<a href="http://elgansodorado.com" style="position:absolute;color:#7D8392;font-size:clamp(2.65vw,21.18px,3.58vw);">
+						Menu
+					</a>
+				</div>
+				<a href="http://elgansodorado.com">
+					<img src="pictures/Logo_01.svg" style="position:absolute;top:11.43%;left:38.58%;height:67.46%;width:22.3%;" />
+				</a>
+				<a href="http://elgansodorado.com/contactus">
+					<button style="top:36.93%;left:75.53%;height:28.02%;width:14.79%;color:#EBEBEB;background-color:#F98E2D;border:none;">
+						Contact Us
+					</button>
+				</a>
+			</div>
+			<div style="position:absolute;top:7.96%;left:0%;height:14.32%;width:100%;">
+				<div style="position:absolute;top:0;left:-100%;height:100%;width:200vw;background-color:#7D8392;"></div>
+				<span style="position:absolute;top:15.4%;left:13.74%;color:#F98E2D;font-size:clamp(8.52vw,68.18px,11.52vw);">
+					<b>EGD</b>
+				</span>
+				<span style="position:absolute;top:54%;left:13.13%;color:#EBEBEB;font-size:clamp(4.27vw,34.18px,5.77vw);">
+					Bright Ideas<br>Effective Solutions
+				</span>
+				<img src="pictures/goose.png" style="position:absolute;top:10.78%;left:67.46%;height:89.22%;width:auto;" />
+			</div>
+			<div style="list-style-type:none;position:absolute;top:23%;left:.7%;height:7.96%;width:98.6%;">
+				<div style="position:absolute;height:100%;width:25%;">
+					<div tabindex="0" class="dDownBox">
+						<div class="dDownBoxAssets">
+							<h1>
+								Model Based<br>System Engineering<br>(MBSE)
+							</h1>
+							<p>
+								Create End-to-End<br>Traceability
+							</p>
+							<div class="dDTriLoc">
+								<img src="pictures/triangle.png" class="dDTriSize" />
+							</div>
+						</div>
+						<div class="dDownMenu">
+							<a href="http://elgansodorado.com">SysML</a>
+							<a href="http://elgansodorado.com">Requirements and Specifications</a>
+							<a href="http://elgansodorado.com">Concept of Operations (CONOPS)</a>
+							<a href="http://elgansodorado.com">Using Industry Tools</a>
+							<a href="http://elgansodorado.com">Process Definition</a>
+						</div>
+					</div>
+				</div>
+				<div style="position:absolute;left:25%;height:100%;width:25%;">
+					<div tabindex="0" class="dDownBox">
+						<div class="dDownBoxAssets">
+							<h1>
+								Architecture<br>
+							</h1>
+							<p>
+								<br>Define the<br>Conceptual Model
+							</p>
+							<div class="dDTriLoc">
+								<img src="pictures/triangle.png" class="dDTriSize" />
+							</div>
+						</div>
+						<div class="dDownMenu">
+							<a href="http://elgansodorado.com">System Decomposition</a>
+							<a href="http://elgansodorado.com">Functional, Behavioral, Structural Definition</a>
+							<a href="http://elgansodorado.com">Interface Definition</a>
+							<a href="http://elgansodorado.com">Data Bus Evaluation and Network Design</a>
+							<a href="http://elgansodorado.com">Future-Proofing:<br>Security Measures<br>Scalability</a>
+						</div>
+					</div>
+				</div>
+				<div style="position:absolute;left:50%;height:100%;width:25%;">
+					<div tabindex="0" class="dDownBox">
+						<div class="dDownBoxAssets">
+							<h1>
+								Embedded Systems<br>
+							</h1>
+							<p>
+								<br>Produce Specialized<br>Solutions
+							</p>
+							<div class="dDTriLoc">
+								<img src="pictures/triangle.png" class="dDTriSize" />
+							</div>
+						</div>
+						<div class="dDownMenu">
+							<a href="http://elgansodorado.com">Processory Types</a>
+							<a href="http://elgansodorado.com">Hardware Design, Test, and Audit</a>
+							<a href="http://elgansodorado.com">FPGA Development</a>
+							<a href="http://elgansodorado.com">Software Languages</a>
+							<a href="http://elgansodorado.com">Security Test and Audit</a>
+						</div>
+					</div>
+				</div>
+				<div style="position:absolute;left:75%;height:100%;width:25%;">
+					<div tabindex="0" class="dDownBox">
+						<div class="dDownBoxAssets">
+							<h1>
+								Functional Test<br>Development<br>
+							</h1>
+							<p>
+								<br>Demonstrate Requirements<br>are Met
+							</p>
+							<div class="dDTriLoc">
+								<img src="pictures/triangle.png" class="dDTriSize" />
+							</div>
+						</div>
+						<div class="dDownMenu">
+							<a href="http://elgansodorado.com">Custom Test Equipment</a>
+							<a href="http://elgansodorado.com">Test Plans</a>
+							<a href="http://elgansodorado.com">Using Industry Tools</a>
+							<a href="http://elgansodorado.com">Failure Modes and Effects Analysis (FMEA)</a>
+							<a href="http://elgansodorado.com">Automated Testing</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div style="position:absolute;top:33.35%;left:0%;height:9%;width:100%;">
+				<img src="pictures/genericWorkBack.png" style="height:100%;width:49.3%;z-index:-1;float:left;" />
+				<img src="pictures/genericWireWork.png" style="height:100%;width:49.3%;z-index:-1;float:right;" />
+			</div>
+			<div style="position:absolute;top:43.42%;left:0%;height:4.77%;width:100%;">
+				<div class="picCap" style="position:absolute;top:0%;left:1.54%;height:4.77%;width:46.23%;padding:0;">
+					<h1>
+						Commitment to industry best practices
+					</h1>
+					<p>
+						Some blah blah here (One sentence to describe)<br>
+					</p>
+					<a>
+						See more
+					</a>
+				</div>
+				<div class="picCap" style="position:absolute;top:0%;left:52.37%;height:4.77%;width:46.23%;padding:0;">
+					<h1>
+						Innovative Research and Deveopment (R&D)
+					</h1>
+					<p>
+						Some blah blah here (One sentence to describe)<br>
+					</p>
+					<a>
+						See details
+					</a>
+				</div>
+			</div>
+			<div style="position:absolute;top:49.21%;left:0%;height:9.4%;width:100%;">
+				<div class="picCap" style="position:absolute;top:0%;left:1.89%;height:100%;width:19.25%;">
+					<h1>
+						Custom test solutions
+					</h1>
+					<p style="margin-right:20%;">
+						Some blah blah here (One sentence to describe)
+					</p>
+					<a style="color:#7D8392;bottom:100%;">
+						Learn more
+					</a>
+				</div>
+				<img src="pictures/genericTalk.png" style="background:black;;position:absolute;top:0%;left:17.93%;height:100%;width:31.5%;border-radius:40% 40% 0 100%/100% 0 100% 0;border:1px solid black;border:.15vw solid black;" />
+				<img src="pictures/genericOfficeSupplies.jpg" style="background:black;position:absolute;top:0%;left:50.83%;height:100%;width:31.5%;border-radius:0 100% 40% 40%/100% 0% 100% 0%;border:.15vw solid black;" />
+				<div class="picCap" style="position:absolute;display:inline-block;bottom:0%;left:79.35%;height:70%;width:19.37%;text-align:right;">
+					<h1 style="margin-left:20%;">
+						Focused trade studies
+					</h1>
+					<p style="margin-left:10%;">
+					Some blah blah here (One sentence to describe)
+					</p>
+					<a style="color:#7D8392;vertical-align:bottom;">
+						Start now
+					</a>
+				</div>
+			</div>
+			<div style="position:absolute;top:61.8%;left:6.14%;height:4.77%;width:43.28%;">
+				<h1 style="font-size:clamp(3.75vw,29.98px,5.06vw);">
+					Taking the tedium out of traceability
+				</h1>
+			</div>
+			<div style="position:absolute;top:67.94%;left:0%;height:7.16%;width:100%;">
+				<div class="tedCap"style="position:absolute;top:0%;left:5.28%;height:100%;width:44%;">
+					<b>
+						<a>Verification vs. Validation<br></a>
+						<a>CAN and CAN FD<br></a>
+						<a>MBSE Trends</a>
+					</b>
+				</div>
+				<div class="tedCap" style="position:absolute;top:0%;left:53.27%;height:50%;width:44%;">
+					<b>
+						<a>Importance of Requirements<br></a>
+						<a>Selecting the Right Tools</a>
+					</b>
+				</div>
+			</div>
+			<a href="http://elgansodorado.com/articles">
+				<button style="top:72.22%;left:60.07%;height:2.23%;width:21.13%;color:#7D8392;background-color:#EBEBEB;border:.4vw solid #7D8392;">
+					Read more
+				</button>
+			</a>
+			<div style="position:absolute;top:76.13%;left:0%;height:14.32%;width:100%;">
+				<div style="position:absolute;top:0;left:-100%;height:100%;width:200vw;background-color:#F98E2D;"></div>
+				<div style="position:absolute;top:21.09%;left:4.48%;height:22.22%;width:92.14%;">
+					<h1 style="text-align:center;font-size:clamp(3.75vw,29.98px,5.06vw);color:#EBEBEB;">
+						Tell us a bit about your goals, and we'll help you build a development roadmap.
+					</h1>
+				</div>
+				<a href="http://elgansodorado.com/contactus">
+					<button style="position:absolute;top:66.21%;left:42.61%;height:15.56%;width:14.79%;border-radius:1vw;color:#EBEBEB;background-color:transparent;white-space:nowrap;border:.4vw solid #7D8392 ;">
+						Contact Us
+					</button>
+				</a>
+			</div>
+			<div style="position:absolute;top:92.04%;left:10.81%;height:7.16%;width:12.32%;color:#7D8392;">
+				<h1 class="botRef"style="font-size:clamp(1.67vw,13.32px,2.25vw);">
+					<a>Help</a>
+					<br>
+					<a>Contact</a>
+					<br>
+					<a>Careers</a>
+					<br>
+					<a>Terms</a>
+					<br>
+					<a>Site Map</a>
+				</h1>
+			</div>
+	</body>
+</html>

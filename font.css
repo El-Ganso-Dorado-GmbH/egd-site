@@ -1,0 +1,88 @@
+@font-face
+{
+	font-family:FGMed;
+	src:url("fonts/franklin-gothic-medium.ttf");
+}
+@font-face
+{
+	font-family:FGMedCond;
+	src:url("fonts/franklin-gothic-medium-cond.ttf");
+}
+@font-face
+{
+	font-family:FGBook;
+	src:url("fonts/franklin-gothic-book.ttf");
+}
+@font-face
+{
+	font-family:FGDemiCond;
+	src:url("fonts/franklin-gothic-demi-cond.ttf");
+}
+a
+{
+	padding:0;
+	margin:0;
+	text-decoration:none;
+	color:#7D8392;
+}
+h5
+{
+	padding:0;
+	margin:0;
+	font-family:Times;
+}
+h4
+{
+	padding:0;
+	margin:0;
+	font-family:Times;
+	font-weight:normal;
+}
+h3
+{
+	padding:0;
+	margin:0;
+	font-family:FGMed;
+}
+h2
+{
+	padding:0;
+	margin:0;
+	font-family:FGMedCond;
+}
+h1
+{
+	padding:0;
+	margin:0;
+	font-family:FGDemiCond;
+}
+p
+{
+	padding:0;
+	margin:0;
+	font-family:FGBook;
+}
+ul
+{
+	padding:0;
+	margin:0;
+	list-style-type:none;
+	font-family:FGBook;
+}
+.hotBod
+{
+	position:relative;
+	margin:auto;
+	padding-left:clamp(0,190px,20%);
+	padding-right:clamp(0,190px,20%);
+	width:clamp(60%,800px,100%);
+	overflow-x:hidden;
+}
+.botRef
+{
+	font-size:clamp(1.67vw,13.32px,2.25vw);
+}
+.botRef a:hover
+{
+	text-decoration:underline;
+}
