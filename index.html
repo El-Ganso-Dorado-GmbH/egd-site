@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<title>EGD Homepage</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="general.css" />
+		<style>
+			.gooseRibbon{
+				height: auto;
+				width: 80%;
+				background-color: #7D8392;
+				z-index: 1;
+			}.gooseRibbonPhrase{
+				bottom: 5%;
+				left: 10%;
+			}.gooseRibbon h1{
+				color: #F98E2D;
+			}.gooseRibbon h2{
+				color: #EBEBEB;
+			}.gooseRibbonGoose{
+				bottom: 0;
+				left: 100%;
+				height: auto;
+				width: 25%;
+				max-width: 140px;
+				z-index: -1;
+			}.gooseRibbonGoose img{
+				height: auto;
+				width: 100%;
+				float: right;
+			}
+			.dropdown{
+				height: auto;
+				width: 100%;
+				text-align: center;
+			}.dropdown table{
+				background-color: #EBEBEB;
+			}.dropdown td{
+				height: 100%;
+				width: 25%;
+				cursor: pointer;
+				padding-bottom: 40px;
+			}.dropdown p{
+				font-size: 1.2em;
+			}.dropdownTriangle{
+				bottom:0;
+				left: 50%;
+				height:30px;
+				width: auto;
+				margin: 5px auto;
+				transform: translate(-50%, 0);
+			}.dropdownOptions{
+				display: none;
+				top: 100%;
+				left: -1px;
+				height: auto;
+				width: 100%;
+				text-align: left;
+				border: 1px solid black;
+				border-top: none;
+				background-color: #EBEBEB;
+				z-index: 1;
+			}.dropdownOptions li{
+				margin: 15px 10%;
+				font-size: 1.5em;
+			}.dropdownClose{
+				display: none;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+			}.dropdown td:focus .dropdownOptions{
+				display: initial;
+			}.dropdown td:focus .dropdownClose{
+				display: initial;
+			}.dropdown td:focus .dropdownTriangle img{
+				transform: rotate(180deg);
+			}
+			.images1{
+				height: auto;
+				width: 100%;
+			}.images1 td{
+				border: none;
+				width: 50%;
+			}.images1 img{
+				height: auto;
+				width: 100%;
+			}
+			.images2{
+				height: auto;
+				width: 100%;
+			}.images2 td{
+				width: 25%;
+				border: none;
+			}.images2 img{
+				height: auto;
+				width: 125%;
+				border: 2px solid black;
+				background-color: black;
+			}.images2Left h3, .images2Left p{
+				margin-right: 20%;
+			}.images2Left img{
+				border-radius: 40% 40% 0 100%/100% 0 100% 0;
+				border-right: none;
+				float: right;
+			}.images2Right h3, .images2Right p{
+				text-align: right;
+				margin-left: 20%;
+			}.images2Right img{
+				border-radius: 0 100% 40% 40%/100% 0% 100% 0%;
+				border-left: none;
+				float: left;
+			}
+			.articles{
+				width: 100%;
+				text-align: center;
+			}.articles td{
+				width: 50%;
+				border: none;
+			}.articles h4{
+				margin: 5px;
+				color: #7D8392;
+			}
+			.bottomRibbon{
+				height: auto;
+				width: 100%;
+				text-align: center;
+			}.bottomRibbon span{
+				background-color: #F98E2D;
+			}.bottomRibbon h3{
+				margin: 20px;
+				color: #EBEBEB;
+			}.bottomRibbon button{
+				margin: 10px;
+			}.bottomRibbonText{
+				top: 40%;
+				left: 50%;
+				height: auto;
+				width: 100%;
+				transform: translate(-50%, -40%);
+			}
+			@media only screen and (max-width: 760px){
+				td{
+					display: block;
+					padding: 0;
+				}.dropdown td, .images1 td, .images2 td, .articles td{
+					width: 100%;
+				}.images2 img{
+					width: 99%;
+					border: 2px solid black;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="head">
+			<a class="headImage" href="https://elgansodorado.com">
+				<img alt="EGD Logo" src="pictures/Logo_01.svg"/>
+			</a>
+			<span class="headButton">
+				<form action="https://elgansodorado.com/contactus">
+					<button class="buttonOrange">
+						Contact Us
+					</button>
+				</form>
+			</span>
+		</div>
+		<div class="gooseRibbon">
+			<span class="ribbon"></span>
+			<h1>EGD</h1>
+			<h2>Bright Ideas<br>Effective Solutions</h2>
+			<span class="gooseRibbonGoose">
+				<img alt="GOOSE" src="pictures/goose.png" />
+			</span>
+		</div>
+		<div class="dropdown">
+			<table>
+				<tr>
+					<td tabindex="0">
+						<h5>
+							Model Based<br>Systems Engineering
+						</h5>
+						<p>
+							Create End-to-End<br>Traceability
+						</p>
+						<span class="dropdownTriangle">
+							<img alt="Drop Down Triangle" src="pictures/triangle.png" />
+						</span>
+						<span tabindex="0" class="dropdownClose"></span>
+						<span class="dropdownOptions">
+							<ul>
+								<li><a href="https://elgansodorado.com">SysML</a></li>
+								<li><a href="https://elgansodorado.com">Requirements and Specifications</a></li>
+								<li><a href="https://elgansodorado.com">Concept of Operations (CONOPS)</a></li>
+								<li><a href="https://elgansodorado.com">Using Industry Tools</a></li>
+								<li><a href="https://elgansodorado.com">Process Definition</a></li>
+							</ul>
+						</span>
+					</td>
+					<td tabindex="0">
+						<h5>
+							Architecture
+						</h5>
+						<p>
+							Define the<br>Conceptual Model
+						</p>
+						<span class="dropdownTriangle">
+							<img alt="Drop Down Triangle" src="pictures/triangle.png" />
+						</span>
+						<span tabindex="0" class="dropdownClose"></span>
+						<span class="dropdownOptions">
+							<ul>
+								<li><a href="https://elgansodorado.com">System Decomposition</a></li>
+								<li><a href="https://elgansodorado.com">Functional, Behavioral, Structural Definition</a></li>
+								<li><a href="https://elgansodorado.com">Interface Definition</a></li>
+								<li><a href="https://elgansodorado.com">Data Bus Evaluation and Network Design</a></li>
+								<li><a href="https://elgansodorado.com">Future-Proofing:<br>Security Measures<br>Scalability</a></li>
+							</ul>
+						</span>
+					</td>
+					<td tabindex="0">
+						<h5>
+							Embedded Systems
+						</h5>
+						<p>
+							Produce Specialized<br>Solutions
+						</p>
+						<span class="dropdownTriangle">
+							<img alt="Drop Down Triangle" src="pictures/triangle.png" />
+						</span>
+						<span tabindex="0" class="dropdownClose"></span>
+						<span class="dropdownOptions">
+							<ul>
+								<li><a href="https://elgansodorado.com">Processory Types</a></li>
+								<li><a href="https://elgansodorado.com">Hardware Design, Test, and Audit</a></li>
+								<li><a href="https://elgansodorado.com">FPGA Development</a></li>
+								<li><a href="https://elgansodorado.com">Software Languages</a></li>
+								<li><a href="https://elgansodorado.com">Security Test and Audit</a></li>
+							</ul>
+						</span>
+					</td>
+					<td tabindex="0">
+						<h5>
+							Functional Test<br>Development
+						</h5>
+						<p>
+							Demonstrate Requirements<br>are Met
+						</p>
+						<span class="dropdownTriangle">
+							<img alt="Drop Down Triangle" src="pictures/triangle.png" />
+						</span>
+						<span tabindex="0" class="dropdownClose"></span>
+						<span class="dropdownOptions">
+							<ul>
+								<li><a href="https://elgansodorado.com">Custom Test Equipment</a></li>
+								<li><a href="https://elgansodorado.com">Test Plans</a></li>
+								<li><a href="https://elgansodorado.com">Using Industry Tools</a></li>
+								<li><a href="https://elgansodorado.com">Failure Modes and Effects Analysis (FMEA)</a></li>
+								<li><a href="https://elgansodorado.com">Automated Testing</a></li>
+							</ul>
+						</span>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="images1">
+			<table>
+				<tr>
+					<td>
+						<img alt="Generic Working 1" src="pictures/genericWorkBack.png" />
+						<h3>
+							Commitment to industry best practices
+						</h3>
+						<p>
+							Through our rigorous adherence with established standards, processes, and certifications.
+						</p>
+						<p><a href="">See more</a></p>
+					</td>
+					<td>
+						<img alt="Generic Working 2" src="pictures/genericWireWork.png" />
+						<h3>
+							Innovative Research and Deveopment (R&D)
+						</h3>
+						<p>
+							Cutting-edge technologies and the exploration of new ideas stay ahead of the curve in modern, constantly evolving fields.
+						</p>
+						<p><a href="">See details</a></p>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="images2">
+			<table>
+				<tr>
+					<td class="images2Left">
+						<h3>
+							Custom test solutions
+						</h3>
+						<p>
+							Ensure reliability, performance, and safety of complex systems by providing a tailored and controlled testing environment that replicates real-world conditions
+						</p>
+						<p><a href="">Learn more</a></p>
+					</td>
+					<td class="images2Left">
+						<img alt="Generic Talking" src="pictures/genericTalk.png" />
+					</td>
+					<td class="images2Right">
+						<img alt="Generic Office Supplies" src="pictures/genericOfficeSupplies.png" />
+					</td>
+					<td class="images2Right">
+						<h3>
+							Focused trade studies
+						</h3>
+						<p>
+							Comprehensive and systematic analyses of competing design options identifies the most cost-effective and feasible solutions for complex systems
+						</p>
+						<p><a href="">Start now</a></p>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<h2>Taking the Tedium<br>out of Traceability</h2>
+		</div>
+		<div class="articles">
+			<table>
+				<tr>
+					<td>
+						<h4><a href="">Verification vs Validation</a></h4>
+					</td>
+					<td>
+						<h4><a href="">CAN and CAN FD</a></h4>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h4><a href="">MBSE Trends</a></h4>
+					</td>
+					<td>
+						<h4><a href="">Importance of Requirements</a></h4>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h4><a href="">Selecting the Right Tools</a></h4>
+					</td>
+					<td>
+						<form action="https://elgansodorado.com">
+							<button class="buttonGrey">
+								Read More Articles
+							</button>
+						</form>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="bottomRibbon">
+			<span class="ribbon"></span>
+				<h3>
+					Tell us a bit about your goals, and we'll<br>help you build a development roadmap.
+				</h3>
+				<form action="http://elgansodorado.com/contactus">
+					<button class="buttonOrange">
+						Contact Us
+					</button>
+				</form>
+		</div>
+		<div class="foot">
+			<span class="ribbon" style=""></span>
+			<p><a href="">Help</a><p>
+			<p><a href="">Contact</a></p>
+			<p><a href="">Careers</a></p>
+			<p><a href="">Terms</a></p>
+			<p><a href="">Site Map</a></p>
+		</div>
+	</body>
+</html>
