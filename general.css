@@ -33,22 +33,22 @@ a, p, ul
 	cursor: pointer;
 }div{
 	position: relative;
-	padding: 10px 0;
+	padding: 5px 0;
 }form{
 	height: 100%;
 	width: 100%;
 }h1, h2, h3, h4, h5{
-	line-height: 1;
+	line-height: 1.2;
 	padding: 0;
-	margin: 5px 15px;
+	margin: 10px 5px;
 }h1{
 	font-family: Times, serif;
 	font-weight: 700;
-	font-size: 5em;
+	font-size: 9em;
 }h2{
 	font-family: Times, serif;
 	font-weight: 400;
-	font-size: 3em;
+	font-size: 5em;
 }h3{
 	font-family: FGDemiCond, sans-serif;
 	font-weight: 200;
@@ -61,12 +61,15 @@ a, p, ul
 	font-family: FGMedCond, sans-serif;
 	font-weight: 100;
 	font-size: 2em;
+}header, footer{
+	position: relative;
 }img{
 	height: 100%;
 	width: auto;
 }p{
 	font-family:FGBook, sans-serif;
 	font-weight: 400;
+	font-size: 1em;
 	margin: 5px;
 }span{
 	position: absolute;
@@ -93,19 +96,27 @@ a, p, ul
 	height: auto;
 	width: 100%;
 }.headImage{
-	display: block;
-	margin: auto;
-	width: 20%;
-}.headButton{
-	top: 50%;
-	right: 1%;
-	transform: translate(0, -50%);
+	display: inline-block;
+}.headImage img{
 	height: auto;
-	max-height: 100%;
+	width: 100px;
+	margin: 10px;
+}.headOptions{
+	top: 50%;
+	right: 0;
+	transform: translate(0, -50%);
+	height: 100%;
 	width: auto;
-	max-width: 35%;
-}.headButton button{
-	padding: 2px 5px;
+}.headOptions li{
+	float: left;
+	padding: 0 5px;
+}.headOptions td{
+	border: none;
+}.headOptions p{
+	font-weight: 700;
+}.headOptions form{
+	min-width: 10vw;
+	text-align: center;
 }
 .foot{
 	height: auto;
@@ -113,6 +124,16 @@ a, p, ul
 	background-color: #EBEBEB;
 }.foot a{
 	font-size: 1.25em;
+}.foot hr{
+	width: 300%;
+	transform: translate(-50%, 0);
+}.footOptions th, .footOptions td{
+	text-align: left;
+	width: 25%;
+	border: none;
+}.footFoot td{
+	border: none;
+	width: 33.33%;
 }
 .buttonOrange{
 	color: #EBEBEB;
@@ -128,6 +149,12 @@ a, p, ul
 }.buttonGrey:hover{
 	color: #EBEBEB;
 	background-color: #7D8392;
+}
+.horizontalUl{
+	display: flex;
+	height: 100%;
+}.horizontalUl li{
+	margin: auto;
 }
 .ribbon{
 	top: 0;
