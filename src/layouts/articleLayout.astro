@@ -1,0 +1,8 @@
+---
+import Layout from "./generalLayout.astro";
+
+const {title, pubDate, topRibbon, botRibbon,} = Astro.props.frontmatter;
+---
+<Layout title={title} topRibbonVars={topRibbon} botRibbonVars={botRibbon}>
+	<slot />
+</Layout>

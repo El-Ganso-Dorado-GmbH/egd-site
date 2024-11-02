@@ -1,0 +1,41 @@
+---
+import Layout from "../../layouts/generalLayout.astro";
+
+const title = "Impressum";
+const topRibbon = {
+	txt: "Impressum",
+};
+const botRibbon = {
+	txt: "Tell us a bit about your goals, and we'll help you build a development roadmap",
+	buttonTxt: "Contact Us",
+};
+---
+
+<Layout title={title} topRibbonVars={topRibbon} botRibbonVars={botRibbon}>
+	<div class="impressum">
+		<p>
+			El Ganso Dorado GmbH<br>
+			ADDRESS<br>
+			<br>
+			E-Mail: info@elgansodorado.com<br>
+			Phone: PHONE<br>
+			<br>
+			BOARD MEMBERS<br>
+			<br>
+			VAT
+		</p>
+	</div>
+</Layout>
+<style>
+	.impressum{
+		width: 50%;
+	}.impressum p{
+		font-size: 1.5em;
+	}
+	@media only screen and (max-width: 760px){
+		.impressum{
+			width: 100%;
+		}
+	}
+</style>
+

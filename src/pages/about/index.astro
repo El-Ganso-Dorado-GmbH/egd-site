@@ -1,0 +1,42 @@
+---
+import Layout from "../../layouts/generalLayout.astro";
+
+const title = "About Us";
+const topRibbon = {
+	txt: "About Us",
+};
+const botRibbon = {
+	txt: "Tell us a bit about your goals, and we'll help you build a development roadmap",
+	buttonTxt: "Contact Us",
+};
+---
+<Layout title={title} topRibbonVars={topRibbon} botRibbonVars={botRibbon}>
+	<div class="about">
+		<h2>Who we are</h2>
+		<p>EGD is a boutique consulting firm focused on solving complex problems using engineering best practices.<br>
+		Our team comes from the tech industry, with experience in space systems, automotive, and quantum computing.<br>
+		Our founders are from the US and Europe, we are a German GmbH, and we have customers worldwide.</p>
+		<h2>Code of Conduct</h2>
+		<p><b>Gracious:</b> We treat eachother with respect, politeness, and kindness, regardless of sex, gender, race, religion, age, disability, or political/group affiliation. We do not belittle, interrupt, or exclude any team members. We say please and thank you. We respond to questions and requests in a timely manner. And we hold our clients to this standard.<br>
+		<b>Observant:</b> We take the time to listen before we speak. We learn and honor the individual company culture of each client before making professional recommendations. We consider reactions and effects on others before taking action.<br>
+		<b>Outspoken:</b> We speak out when we see behavior in each other that appears to violate engineering or business ethics. We speak up when we have an idea, even when we don't feel confident. We hold each other accountable in technical design to ensure high engineering standards.<br>
+		<b>Self-Starting:</b> We take responsibility for our own commitments. We don't tolerate micromanaging. We  look for opportunities to perform work that needs to be done, improve process, and support our clients, even if it's in an area that falls outside of current contract scope or job description.<br>
+		<b>Ethical:</b> We practice integrity and do the "right" thing even when no one is looking. We do not cut corners in engineering or test development, and we do not engage with customers who ask us to take shortcuts with regard to safety or transparency. Our work speaks for itself: we do not try to "upsell" or convince clients to add additional services. We do not "pad" client hours or base our work on "billable" hours. We are transparent with each other and our clients at all times.<br>
+		<b>Discrete:</b> We do not gossip or disclose personal information about each other or our clients. We address personal issues directly with each other, before elevating grievances. We remain neutral on all internal business decisions made by our clients. We get permission before disclosing who our clients are publicly, regardless of whether or not there is an NDA in place.</p>
+	</div>
+</Layout>
+<style>
+	.about{
+		display: grid;
+		grid-template-columns: 30% 70%;
+	}.about h2{
+		color: var(--egdDarkGrey);
+		margin-top: 0;
+	}.about p{
+	}
+	@media only screen and (max-width: 760px){
+		.about{
+			grid-template-columns: 100%;
+		}
+	}
+</style>

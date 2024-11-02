@@ -1,0 +1,52 @@
+---
+import Layout from "../../layouts/generalLayout.astro";
+
+const title = "Contact Us";
+const topRibbon = {
+	txt: "Contact Us",
+};
+const botRibbon = {
+	txt: "Tell us a bit about your goals, and we'll help you build a development roadmap",
+	buttonTxt: "Contact Us",
+};
+---
+
+<Layout title={title} topRibbonVars={topRibbon} botRibbonVars={botRibbon}>
+	<div class="contact">
+		<div class="contactOption">
+			<a href=""><img src="/envelopeIcon.svg" alt=""><h2>Mail</h2></a>
+		</div>
+		<div class="contactOption">
+			<a href=""><img src="/phoneIcon.svg" alt=""><h2>Phone</h2></a>
+		</div>
+		<div class="contactOption">
+			<a href=""><img src="/emailIcon.svg" alt=""><h2>Email</h2></a>
+		</div>
+	</div>
+</Layout>
+<style>
+	.contact{
+		display: grid;
+		grid-template-columns: 33.3333% 33.3333% 33.3333%;
+	}.contact img{
+		display: block;
+		height: 200px;
+		width: 200px;
+		padding: 5%;
+		border: 5px solid var(--egdDarkGrey);
+		border-radius: 40px;
+		margin: auto;
+		object-fit: contain;
+	}.contact h2{
+		text-align: center;
+		margin: 0;
+	}.contactOption{
+		width: 100%;
+	}
+	@media only screen and (max-width: 760px){
+		.contact{
+			grid-template-columns: 100%;
+		}
+	}
+</style>
+

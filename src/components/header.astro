@@ -1,0 +1,127 @@
+---
+---
+
+<header class="head">
+	<a class="headImage" href="/">
+		<img alt="EGD Logo" src="/Logo_01.svg"/>
+	</a>
+	<span tabindex="-1" class="headOptions">
+		<ul class="horizontalUl">
+			<li>
+				<p><a href="/about">About</a></p>
+			</li>
+			<li>
+				<p><a href="/contact">Contact Us</a></p>
+			</li>
+			<li>
+				<p><a href="/services">Services</a></p>
+			</li>
+			<li>
+				<p><a href="/articles">Insights</a></p>
+			</li>
+			<li>
+				<form action="https://egd-shop.com">
+					<button class="buttonBlue">
+						eServices
+					</button>
+				</form>
+			</li>
+		</ul>
+		<hr>
+		<hr>
+		<hr>
+	</span>
+	<span class="headOptions headOptionsClose">
+		<hr class="headOptionsCloseLeft">
+		<hr class="headOptionsCloseRight">
+	</span>
+</header>
+<style>
+	.head{
+		height: auto;
+		min-height: 40px;
+		width: 100%;
+	}.headImage{
+		display: inline-block;
+	}.headImage img{
+		height: auto;
+		min-height: 40px;
+		width: 100px;
+		margin: 10px;
+	}.headOptions{
+		top: 0;
+		right: 25px;
+		height: 100%;
+		width: auto;
+		z-index: 4;
+		background-color: inherit;
+	}.headOptions p{
+		font-weight: 700;
+		float: left;
+	}.headOptions hr{
+		display: none;
+		margin: 6px 0;
+		height: 4px;
+		width: 36px;
+	}
+	@media only screen and (max-width: 760px){
+		.headOptions{
+			top: 20px;
+			height: auto;
+			cursor: pointer;
+		}.headOptions ul{
+			display: none;
+		}.headOptions hr{
+			display: block;
+		}.head:focus-within .headOptionsClose{
+			display: block;
+		}.headOptions:focus-within{
+			position: fixed;
+			display: block;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			transform: none;
+			margin: 0;
+			cursor: default;
+			background-color: var(--egdLightGrey);
+			z-index: 2;
+		}.headOptions:focus-within ul{
+			position: absolute;
+			display: block;
+			top: 50%;
+			left: 50%;
+			height: auto;
+			transform: translate(-50%, -50%);
+		}.headOptions:focus-within li{
+			display: inline-block;
+			width: 100%;
+			margin: 10px 0;
+		}.headOptions:focus-within p{
+			width: 100%;
+			font-size: 2em;
+			margin: 0;
+		}.headOptions:focus-within hr{
+			display: none;
+		}.headOptionsClose{
+			position: fixed;
+			display: none;
+			top: 18px;
+			right: 25px;
+			height: 36px;
+			width: 36px;
+			cursor: pointer;
+			z-index: 3;
+		}.headOptionsClose hr{
+			position: absolute;
+			top: 50%;
+			right: 0;
+			margin: 0;
+		}.headOptionsCloseLeft{
+			rotate: -45deg;
+		}.headOptionsCloseRight{
+			rotate: 45deg;
+		}
+	}
+</style>

@@ -1,0 +1,323 @@
+---
+import Layout from "../layouts/generalLayout.astro";
+
+const posts = await Astro.glob("./articles/*.md");
+
+const title = "Homepage";
+const topRibbon = {
+	txt: "EGD",
+	subtxt: "Bright Ideas<br>Effective Solutions",
+	imgAlt: "GOOSE",
+	imgLink: "/goose.png",
+	imgType: "foreground",
+};
+const botRibbon = {
+	txt: "Tell us a bit about your goals, and we'll help you build a development roadmap",
+	buttonTxt: "Contact Us",
+};
+---
+
+<Layout title={title} topRibbonVars={topRibbon} botRibbonVars={botRibbon}>
+	<div class="dropdown">
+		<div tabindex="-1">
+			<h4>Engineering Services</h4>
+			<p>Solving complex problems in order to improve operation, production, and infrastructure</p>
+			<span class="dropdownTriangle"></span>
+			<span class="dropdownOptions">
+				<ul>
+					<li><a href="/">Security Assessments</a></li>
+					<li><a href="/">Digital Transformation Assessments</a></li>
+					<li><a href="/">MBSE and Traditional Systems Engineering</a></li>
+					<li><a href="/">Tools Trade Studies</a></li>
+					<li><a href="/">Critical Infrastructure,<br>Security Recommendations,<br>and Pentesting</a></li>
+				</ul>
+			</span>
+		</div>
+		<div tabindex="-1">
+			<h4>Secure Automotive Solutions</h4>
+			<p>Enabling the design, testing, and optimization of vehicles</p>
+			<span class="dropdownTriangle"></span>
+			<span class="dropdownOptions">
+				<ul>
+					<li><a href="/">Onsite Troubleshooting</a></li>
+					<li><a href="/">Remote Diagnostics and Programming</a></li>
+					<li><a href="/">Lockout Services (Original Key Not Necessary)</a></li>
+					<li><a href="/">Aftermarket Keys and Keyfobs</a></li>
+					<li><a href="/">Mechanical Keymaking</a></li>
+					<li><a href="/">Remote/Transponder Creating and Cloning</a></li>
+					<li><a href="/">Direct Diagnostics</a></li>
+				</ul>
+			</span>
+		</div>
+	</div>
+	<div class="pictures">
+		<div class="picturesTop">
+			<img alt="Generic Work Background" src="/genericWorkBack.png" />
+			<div class="picturesDropdown" tabindex="-1">
+				<h4>Engineering Services</h4>
+				<p>Solving complex problems to improve operation, production, and infrastructure</p>
+				<span class="picturesTriangle"></span>
+				<span class="picturesOptions">
+					<ul>
+						<li><a href="/">Security Assessments</a></li>
+						<li><a href="/">Digital Transformation Assessments</a></li>
+						<li><a href="/">MBSE and Traditional Systems Engineering</a></li>
+						<li><a href="/">Tools Trade Studies</a></li>
+						<li><a href="/">Critical Infrastructure,<br>Security Recommendations,<br>and Pentesting</a></li>
+					</ul>
+				</span>
+			</div>
+		</div>
+		<div class="picturesBot">
+			<div class="picturesDropdown" tabindex="-1">
+				<h4>Secure Automotive Solutions</h4>
+				<p>Enabling the design, testing, and optimization of vehicles</p>
+				<span class="picturesTriangle"></span>
+				<span class="picturesOptions">
+					<ul>
+						<li><a href="/">Onsite Troubleshooting</a></li>
+						<li><a href="/">Remote Diagnostics and Programming</a></li>
+						<li><a href="/">Lockout Services (Original Key Not Necessary)</a></li>
+						<li><a href="/">Aftermarket Keys and Keyfobs</a></li>
+						<li><a href="/">Mechanical Keymaking</a></li>
+						<li><a href="/">Remote/Transponder Creating and Cloning</a></li>
+						<li><a href="/">Direct Diagnostics</a></li>
+					</ul>
+				</span>
+			</div>
+			<img alt="Generic Talking" src="/genericWireWork.png" />
+		</div>
+	</div>
+	<div class="articles">
+		{posts.slice(0, 6).map(p =>
+			<div class="articlesOption">
+				<a href={p.url}><img src="" alt=""><h4>{p.frontmatter.title}</h4></a>
+			</div>
+		)}
+	</div>
+</Layout>
+
+<style>
+	.topRibbon h1{
+		font-size: 9em;
+		padding-left: 12%;
+	}.topRibbon h2{
+		font-size: 5em;
+		padding-left: 10%;
+	}.topRibbon img{
+			}
+	@media only screen and (max-width: 760px){
+		.topRibbon h1, .topRibbon h2{
+			text-align: center;
+			padding: 0;
+		}.topRibbon h2{
+			opacity: 0;
+		}
+	}
+	.dropdown{
+		display: grid;
+		grid-template-columns: 50% 50%;
+		height: auto;
+		width: 100%;
+		text-align: center;
+	}.dropdown div{
+		display: flex;
+		min-height: 140px;
+		flex-direction: column;
+		justify-content: center;
+		border: 1px solid black;
+		border-radius: 20px;
+		cursor: pointer;
+		padding: 10px 20px 50px 20px;
+		margin: 10px 30px;
+		background-color: var(--egdLightGrey);
+	}.dropdown p{
+		font-size: 1.2em;
+	}.dropdownTriangle{
+		bottom: 5px;
+		left: 50%;
+		height: 0;
+		width: 0;
+		border-top: 30px solid var(--egdOrange);
+		border-left: 22px solid transparent;
+		border-right: 22px solid transparent;
+		transform: translate(-50%, 0);
+	}.dropdownOptions{
+		display: none;
+		top: 100%;
+		left: -1px;
+		height: auto;
+		width: 100%;
+		text-align: left;
+		border: 1px solid black;
+		border-radius: 0 0 20px 20px;
+		border-top: none;
+		background-color: var(--egdLightGrey);
+		z-index: 1;
+	}.dropdownOptions li{
+		margin: 15px 15%;
+		text-indent: -10%;
+		font-size: 1.5em;
+	}.dropdown div:focus{
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}.dropdown div:focus .dropdownOptions{
+		display: initial;
+	}.dropdown div:focus .dropdownTriangle{
+		border: none;
+		/*transform: translate(-50%, 0) rotate(180deg);*/
+	}.dropdownClose{
+		height: 100%;
+		width: 100%;
+	}
+	.pictures{
+		border-radius: 40px;
+		background-color: var(--egdLightGrey);
+		padding: 0;
+		margin: 10px;
+		border: 1px solid black;
+	}.pictures div{
+		padding: 0;
+		text-align: center;
+	}.pictures img{
+		height: 100%;
+		width: 100%;
+	}.pictures li{
+		text-align: left;
+		margin: 15px 15%;
+		text-indent: -10%;
+		font-size: 1.5em;
+	}.picturesTop, .picturesBot{
+		display: grid;
+	}.picturesTop{
+		grid-template-columns: 70% 30%;
+	}.picturesBot{
+		grid-template-columns: 30% 70%;
+	}.picturesTop img{
+		border-top-left-radius: 40px;
+	}.picturesBot img{
+		border-bottom-right-radius: 40px;
+	}.picturesDropdown{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		cursor: pointer;
+	}.picturesTop .picturesDropdown{
+		padding: 30px 0 50px 0;
+	}.picturesBot .picturesDropdown{
+		padding: 50px 0 30px 0;
+	}.picturesTriangle{
+		left: 50%;
+		transform: translate(-50%, 0);
+		border-left: 22px solid transparent;
+		border-right: 22px solid transparent;
+	}.picturesTop .picturesTriangle{
+		bottom: 10px;
+		border-top: 30px solid var(--egdOrange);
+	}.picturesBot .picturesTriangle{
+		top: 10px;
+		border-bottom: 30px solid var(--egdBlue);
+	}.picturesOptions{
+		height: auto;
+		min-height: 100%;
+		width: 233.3333%;
+		border: 1px solid black;
+		z-index: 1;
+	}.picturesTop .picturesOptions{
+		display: none;
+		top: 100%;
+		right: -1px;
+		border-top: 0;
+		border-bottom-right-radius: 40px;
+		background-image: linear-gradient(to bottom, var(--egdLightGrey), var(--egdOrange));
+	}.picturesBot .picturesOptions{
+		display: none;
+		bottom: 100%;
+		left: -1px;
+		border-bottom: 0;
+		border-top-left-radius: 40px;
+		background-image: linear-gradient(to top, var(--egdLightGrey), var(--egdBlue));
+	}.pictures div:focus-within{
+		cursor: default;
+	}.pictures div:focus-within .picturesOptions{
+		display: block;
+	}.pictures div:focus-within .picturesTriangle{
+		display: none;
+	}
+	@media only screen and (max-width: 760px){
+		.picturesTop, .picturesBot{
+			grid-template-columns: 100%;
+		}.picturesOptions{
+			width: 100%;
+		}.picturesTop img{
+			border-top-right-radius: 40px;
+		}.picturesBot img{
+			border-bottom-left-radius: 40px;
+		}.picturesTop .picturesDropdown{
+			padding: 50px 0 30px 0;
+		}.picturesBot .picturesDropdown{
+			padding: 30px 0 50px 0;
+		}.picturesTop .picturesTriangle{
+			top: 10px;
+			bottom: unset;
+			border-top: 0;
+			border-bottom: 30px solid var(--egdOrange);
+		}.picturesBot .picturesTriangle{
+			top: unset;
+			bottom: 10px;
+			border-top: 30px solid var(--egdBlue);
+			border-bottom: 0;
+		}.picturesTop .picturesOptions{
+			top: unset;
+			bottom: 100%;
+			border-radius: 40px 40px 0 0;
+			border: 1px solid black;
+			border-bottom: 0;
+			background-image: linear-gradient(to top, var(--egdLightGrey), var(--egdOrange));
+		}.picturesBot .picturesOptions{
+			top: 100%;
+			bottom: unset;
+			border-radius: 0 0 40px 40px;
+			border: 1px solid black;
+			border-top: 0;
+			background-image: linear-gradient(to bottom, var(--egdLightGrey), var(--egdBlue));
+		}
+	}
+	.articles{
+		display: flex;
+		height: auto;
+		width: 936px;
+		max-width: 100%;
+		margin: auto;
+		overflow-x: scroll;
+		overflow-y: hidden;
+		scroll-snap-type: x mandatory;
+		flex-wrap: nowrap;
+	}.articles a{
+		display: block;
+		height: 100%;
+		width: 100%;
+	}.articles img{
+		height: 125px;
+		width: 100%;
+	}.articlesOption{
+		height: auto;
+		width: 250px;
+		min-height: 350px;
+		flex: 0 0 auto;
+		border: 1px solid black;
+		border-radius: 20px;
+		padding: 0;
+		margin: 0 30px;
+		overflow: hidden;
+		scroll-snap-align: center;
+		background-color: var(--egdLightGrey);
+	}
+	@media only screen and (max-width: 760px){
+		.dropdown{
+			grid-template-columns: 100%;
+		}.articles{
+			overflow-x: scroll;
+		}
+	}
+</style>

@@ -1,0 +1,53 @@
+---
+import Layout from "../../layouts/generalLayout.astro";
+
+const posts = await Astro.glob("./*.md");
+posts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
+
+const title = "Articles";
+const topRibbon = {
+	txt: "Articles",
+};
+const botRibbon = {
+	txt: "Have any questions not covered here?",
+	buttonTxt: "Contact Us",
+};
+---
+
+<Layout title={title} topRibbonVars={topRibbon} botRibbonVars={botRibbon}>
+	<div class="articles">
+		{posts.map(p =>
+			<div class="articlesOption">
+				<a href={p.url}><img src="" alt=""><h5>{p.frontmatter.title}</h5><hr /><p>{p.frontmatter.description}</p></a>
+			</div>
+		)}
+	</div>
+</Layout>
+
+<style>
+	.articles{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}.articlesOption{
+		height: auto;
+		min-height: 350px;
+		width: 350px;
+		margin: 10px;
+		padding: 0;
+	}.articlesOption a{
+		display: block;
+		height: 100%;
+		width: 100%;
+	}.articlesOption img{
+		height: 175px;
+		width: 100%;
+	}.articlesOption h5, .articlesOption p{
+		margin-top: 0;
+		margin-bottom: 0;
+	}.articlesOption p{
+		font-size: 1em;
+	}.articlesOption hr{
+		margin: 5px 0;
+	}
+</style>

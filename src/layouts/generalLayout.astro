@@ -1,0 +1,27 @@
+---
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
+import TopRibbon from "../components/topRibbon.astro";
+import BotRibbon from "../components/botRibbon.astro";
+
+import "../styles/global.css"
+
+const {title, topRibbonVars, botRibbonVars,} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>{title} - EGD</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/x-icon" href="/Logo_01.svg" />
+	</head>
+	<Header />
+	<TopRibbon vars={topRibbonVars} />
+	<main>
+		<slot />
+	</main>
+	<BotRibbon vars={botRibbonVars} />
+	<Footer />
+</html>
