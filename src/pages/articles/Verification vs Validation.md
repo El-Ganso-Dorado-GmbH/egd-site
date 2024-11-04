@@ -6,13 +6,11 @@ author: Ethan Briggs
 pubDate: 2024-10-19
 topRibbon: {
     txt: "Verification vs Validation",
-}
-botRibbon: {
-    txt: "Interested in more articles",
-    buttonTxt: "More articles",
-    buttonForm: "/articles",
+    imgLink: /genericTalk.png,
+    imgAlt: Generic Talking,
 }
 ---
+
 In the realm of software development, testing, and quality assurance, two critical concepts often overlap or are used interchangeably: Verification and Validation. While they are related, these terms have distinct meanings that are essential to grasp for anyone involved in ensuring the quality and reliability of products or systems.
 ### Verification
 Verification is a critical process in the development and quality assurance of products or systems, playing a pivotal role in ensuring they meet their intended specifications. In essence, verification is about confirming that a product behaves as expected based on its design requirements, technical documentation, or blueprints. This process involves checking that the product functions correctly according to its specified characteristics, performance standards, and other attributes.

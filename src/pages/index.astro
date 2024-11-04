@@ -2,6 +2,7 @@
 import Layout from "../layouts/generalLayout.astro";
 
 const posts = await Astro.glob("./articles/*.md");
+posts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
 
 const title = "Homepage";
 const topRibbon = {
@@ -85,13 +86,13 @@ const botRibbon = {
 					</ul>
 				</span>
 			</div>
-			<img alt="Generic Talking" src="/genericWireWork.png" />
+			<img alt="Generic Wire Work" src="/genericWireWork.png" />
 		</div>
 	</div>
 	<div class="articles">
 		{posts.slice(0, 6).map(p =>
 			<div class="articlesOption">
-				<a href={p.url}><img src="" alt=""><h4>{p.frontmatter.title}</h4></a>
+				<a href={p.url}><img src={p.frontmatter.topRibbon.imgLink} alt={p.frontmatter.topRibbon.imgAlt}><h4>{p.frontmatter.title}</h4></a>
 			</div>
 		)}
 	</div>

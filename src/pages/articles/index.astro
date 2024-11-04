@@ -18,7 +18,7 @@ const botRibbon = {
 	<div class="articles">
 		{posts.map(p =>
 			<div class="articlesOption">
-				<a href={p.url}><img src="" alt=""><h5>{p.frontmatter.title}</h5><hr /><p>{p.frontmatter.description}</p></a>
+				<a href={p.url}><img src={p.frontmatter.topRibbon.imgLink} alt={p.frontmatter.topRibbon.imgAlt}><h5>{p.frontmatter.title}</h5><hr /><p>{p.frontmatter.description}</p></a>
 			</div>
 		)}
 	</div>
