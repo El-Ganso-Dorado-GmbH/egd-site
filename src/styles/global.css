@@ -4,6 +4,11 @@
 	--egdDarkGrey: #7D8392;
 	--egdBlue: #8DA9D2;
 }
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
 a, dd, dt, hr, ul
 {
 	padding: 0;
@@ -28,7 +33,7 @@ a, dd, dt, hr, ul
 	cursor: pointer;
 }div{
 	position: relative;
-	padding: 10px 0;
+	padding: 25px 0;
 	border-collapse: collapse;
 }dl{
 	padding: 0;
@@ -46,11 +51,11 @@ a, dd, dt, hr, ul
 	padding: 0;
 	margin: 25px 10px;
 }h1{
-	font-family: "Times New Roman", serif;
+	font-family: "Rubik", "Times New Roman", serif;
 	font-weight: 700;
 	font-size: 6em;
 }h2{
-	font-family: "Times New Roman", serif;
+	font-family: "Rubik", "Times New Roman", serif;
 	font-weight: 400;
 	font-size: 4em;
 }h3{
@@ -74,10 +79,10 @@ a, dd, dt, hr, ul
 	overflow: hidden;
 }img{
 	height: 100%;
-	width: auto;
+	width: 100%;
 	object-fit: cover;
 }li, p{
-	font-family:sans-serif;
+	font-family:"Libre Franklin", sans-serif;
 	font-weight: 400;
 	font-size: 1.2em;
 }p{
@@ -115,6 +120,10 @@ a, dd, dt, hr, ul
 }.buttonGrey:hover{
 	color: var(--egdLightGrey);
 	background-color: var(--egdDarkGrey);
+}.buttonDarkGrey{
+	color: var(--egdLightGrey);
+	background-color: var(--egdDarkGrey);
+	border: 4px solid var(--egdDarkGrey);
 }.buttonBlue{
 	color: var(--egdLightGrey);
 	background-color: var(--egdBlue);
@@ -127,6 +136,7 @@ a, dd, dt, hr, ul
 	display: flex;
 	height: 100%;
 	width: 100%;
+	margin: 0;
 }.horizontalUl li{
 	text-align: center;
 	margin: auto 8px;

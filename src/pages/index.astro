@@ -7,19 +7,20 @@ posts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatte
 const title = "Homepage";
 const topRibbon = {
 	txt: "EGD",
+	txtStyle: "large",
 	subtxt: "Bright Ideas<br>Effective Solutions",
 	imgAlt: "GOOSE",
 	imgLink: "/goose.png",
 	imgType: "foreground",
 };
 const botRibbon = {
-	txt: "Tell us a bit about your goals, and we'll help you build a development roadmap",
+	txt: "Tell us about your goals, and we'll help you build a development roadmap",
 	buttonTxt: "Contact Us",
 };
 ---
 
 <Layout title={title} topRibbonVars={topRibbon} botRibbonVars={botRibbon}>
-	<div class="dropdown">
+	<div class="dropdown" style="display: none;">
 		<div tabindex="-1">
 			<h4>Engineering Services</h4>
 			<p>Solving complex problems in order to improve operation, production, and infrastructure</p>
@@ -57,7 +58,7 @@ const botRibbon = {
 			<div class="picturesDropdown" tabindex="-1">
 				<h4>Engineering Services</h4>
 				<p>Solving complex problems to improve operation, production, and infrastructure</p>
-				<span class="picturesTriangle"></span>
+				<span class="picturesTriangle"><p>More Info</p></span>
 				<span class="picturesOptions">
 					<ul>
 						<li><a href="/">Security Assessments</a></li>
@@ -73,7 +74,7 @@ const botRibbon = {
 			<div class="picturesDropdown" tabindex="-1">
 				<h4>Secure Automotive Solutions</h4>
 				<p>Enabling the design, testing, and optimization of vehicles</p>
-				<span class="picturesTriangle"></span>
+				<span class="picturesTriangle"><p>More Info</p></span>
 				<span class="picturesOptions">
 					<ul>
 						<li><a href="/">Onsite Troubleshooting</a></li>
@@ -90,11 +91,14 @@ const botRibbon = {
 		</div>
 	</div>
 	<div class="articles">
-		{posts.slice(0, 6).map(p =>
+		{posts.slice(0, 4).map(p =>
 			<div class="articlesOption">
 				<a href={p.url}><img src={p.frontmatter.topRibbon.imgLink} alt={p.frontmatter.topRibbon.imgAlt}><h4>{p.frontmatter.title}</h4></a>
 			</div>
 		)}
+		<div class="articlesOption articlesButton">
+			<form action="/articles"><button class="buttonGrey"><h3>More Articles</h3></button></form>
+		</div>
 	</div>
 </Layout>
 
@@ -175,7 +179,7 @@ const botRibbon = {
 		border-radius: 40px;
 		background-color: var(--egdLightGrey);
 		padding: 0;
-		margin: 10px;
+		margin: 25px 10px;
 		border: 1px solid black;
 	}.pictures div{
 		padding: 0;
@@ -210,14 +214,20 @@ const botRibbon = {
 	}.picturesTriangle{
 		left: 50%;
 		transform: translate(-50%, 0);
+		/*
 		border-left: 22px solid transparent;
 		border-right: 22px solid transparent;
+		*/
+	}.picturesTriangle p:hover{
+		text-decoration: underline;
 	}.picturesTop .picturesTriangle{
+		color: var(--egdOrange);
 		bottom: 10px;
-		border-top: 30px solid var(--egdOrange);
+		/*border-top: 30px solid var(--egdOrange);*/
 	}.picturesBot .picturesTriangle{
+		color: var(--egdBlue);
 		top: 10px;
-		border-bottom: 30px solid var(--egdBlue);
+		/*border-bottom: 30px solid var(--egdBlue);*/
 	}.picturesOptions{
 		height: auto;
 		min-height: 100%;
@@ -262,12 +272,12 @@ const botRibbon = {
 			top: 10px;
 			bottom: unset;
 			border-top: 0;
-			border-bottom: 30px solid var(--egdOrange);
+			/*border-bottom: 30px solid var(--egdOrange);*/
 		}.picturesBot .picturesTriangle{
 			top: unset;
 			bottom: 10px;
-			border-top: 30px solid var(--egdBlue);
 			border-bottom: 0;
+			/*border-top: 30px solid var(--egdBlue);*/
 		}.picturesTop .picturesOptions{
 			top: unset;
 			bottom: 100%;
@@ -287,13 +297,11 @@ const botRibbon = {
 	.articles{
 		display: flex;
 		height: auto;
-		width: 936px;
-		max-width: 100%;
+		width: 100%;
 		margin: auto;
-		overflow-x: scroll;
-		overflow-y: hidden;
-		scroll-snap-type: x mandatory;
-		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
 	}.articles a{
 		display: block;
 		height: 100%;
@@ -303,16 +311,24 @@ const botRibbon = {
 		width: 100%;
 	}.articlesOption{
 		height: auto;
-		width: 250px;
-		min-height: 350px;
+		width: 275px;
+		min-height: 250px;
 		flex: 0 0 auto;
-		border: 1px solid black;
+		border: 1px solid var(--egdDarkGrey);
 		border-radius: 20px;
 		padding: 0;
-		margin: 0 30px;
+		margin: 10px 20px;
 		overflow: hidden;
 		scroll-snap-align: center;
 		background-color: var(--egdLightGrey);
+		text-align: center;
+	}.articlesButton{
+		height: auto;
+		min-height: 150px;
+	}.articles button{
+		height: 100%;
+		width: 100%;
+		border-radius: 20px;
 	}
 	@media only screen and (max-width: 760px){
 		.dropdown{

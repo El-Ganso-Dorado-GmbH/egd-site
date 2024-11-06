@@ -1,10 +1,10 @@
 ---
-const {txt, subtxt="", imgAlt, imgLink, imgType="none"} = Astro.props.vars;
+const {txt, txtStyle="", subtxt="", imgAlt, imgLink, imgType="none"} = Astro.props.vars;
 ---
 
 <div class="topRibbon">
 	<span class="ribbon"></span>
-	<h1 set:html={txt}></h1>
+	<h1 class={txtStyle} set:html={txt}></h1>
 	<h2 set:html={subtxt}></h2>
 	<span class={imgType}>
 		<img alt={imgAlt} src={imgLink} />
@@ -18,6 +18,8 @@ const {txt, subtxt="", imgAlt, imgLink, imgType="none"} = Astro.props.vars;
 		padding: 50px 10% 25px 10%;
 		background-color: var(--egdDarkGrey);
 		z-index: 1;
+	}.large{
+		font-size: 9em;
 	}.topRibbon h1{
 		color: var(--egdOrange);
 	}.topRibbon h2{
@@ -37,9 +39,7 @@ const {txt, subtxt="", imgAlt, imgLink, imgType="none"} = Astro.props.vars;
 		height: 100%;
 		width: 100%;
 	}.foreground img{
-		height: 100%;
 		width: auto;
-		max-height: 400px;
 	}
 	@media only screen and (max-width: 760px){
 		.topRibbon{
@@ -54,6 +54,9 @@ const {txt, subtxt="", imgAlt, imgLink, imgType="none"} = Astro.props.vars;
 			position: static;
 			width: 100%;
 			height: auto;
+		}.foreground img{
+			height: auto;
+			width: 100%;
 		}
 	}
 </style>

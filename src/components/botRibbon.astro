@@ -1,5 +1,5 @@
 ---
-const {txt, buttonTxt, buttonType="buttonOrange", buttonForm="/contact"} = Astro.props.vars;
+const {txt, buttonTxt, buttonType="buttonDarkGrey", buttonForm="/contact"} = Astro.props.vars;
 ---
 
 <div class="botRibbon">
@@ -14,8 +14,13 @@ const {txt, buttonTxt, buttonType="buttonOrange", buttonForm="/contact"} = Astro
 
 <style>
 	.botRibbon{
+		display: flex;
 		height: auto;
+		min-height: 200px;
 		width: 100%;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
 		text-align: center;
 		background-color: var(--egdOrange);
 	}.botRibbon h3{

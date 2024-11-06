@@ -1,8 +1,31 @@
 ---
+const socialMedia = [
+{
+	name: "Bluesky",
+	src: "/bluesky-icon.svg",
+	link: "https://bsky.app/profile/elgansodoradogmbh.bsky.social",
+},
+{
+	name: "Mastodon",
+	src: "/mastodon-icon.svg",
+	link: "https://mastodon.social/@elgansodorado",
+},
+{
+	name: "Github",
+	src: "/github-icon.svg",
+	link: "https://github.com/elgansodorado-dev",
+},
+{
+	name: "Patreon",
+	src: "/patreon-icon.svg",
+	link: "https://www.youtube.com/@ElGansoDorado",
+},
+];
 ---
 
 <footer class="foot">
 	<span class="ribbon"></span>
+	<!---
 	<div class="footOptions">
 		<dl>
 			<dt><a href="/about">About</a></dt>
@@ -20,6 +43,7 @@
 		</dl>
 	</div>
 	<hr>
+	--->
 	<div class="footFoot">
 		<ul class="horizontalUl">
 			<li>
@@ -31,12 +55,11 @@
 		</ul>
 		<p>Copyright © 2024 El Ganso Dorado GmbH</p>
 		<ul class="footFootEnd horizontalUl">
-			<li>
-				<p><a href="">sm1</a></p>
-			</li>
-			<li>
-				<p><a href="">sm2</a></p>
-			</li>
+			{socialMedia.map(sm =>
+				<li>
+					<a href={sm.link}><img src={sm.src} alt={sm.name.concat(" Logo")}></a>
+				</li>
+			)}
 		</ul>
 	</div>
 </footer>
@@ -65,6 +88,16 @@
 		padding: 8px 0; 
 	}.footFootEnd{
 		justify-content: flex-end;
+	}.footFootEnd a{
+		display: inline-block;
+		height: 30px;
+		width: 30px;
+	}.footFootEnd img{
+		object-fit: contain;
+		filter: invert(51%) sepia(14%) saturate(305%) hue-rotate(185deg) brightness(97%) contrast(96%);
+	}.footFootEnd img:hover{
+		/*filter: invert(76%) sepia(59%) saturate(4062%) hue-rotate(340deg) brightness(102%) contrast(95%);*/
+		filter: invert(64%) sepia(34%) saturate(346%) hue-rotate(176deg) brightness(98%) contrast(87%);
 	}
 	@media only screen and (max-width: 760px){
 		.foot hr{
@@ -72,6 +105,7 @@
 			transform: none;
 		}.footOptions{
 			grid-template-columns: 50% 50%;
+			text-align: center;
 		}.footFoot{
 			grid-template-columns: 100%;
 		}.footFoot ul{
